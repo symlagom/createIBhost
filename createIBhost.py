@@ -234,13 +234,16 @@ mask = '24'
 # variant b: input dialog for network-
 # Window
 master = Tk()
-master.geometry('500x150')
+master.geometry('900x150')
 master.wm_title('Define Network Parameters')
 Label(master, text="Grid-Master   ").grid(row=0)
 Label(master, text="Network   ").grid(row=1)
 Label(master, text="Netmask   ").grid(row=2)
+Label(master, text="Username    ").grid(row=3)
+Label(master, text="Password    ").grid(row=4)
+
 # Label for error-messages
-Label(master, text="").grid(row=3)
+Label(master, text="").grid(row=5)
 
 e1 = Entry(master)
 e2 = Entry(master)
@@ -248,10 +251,14 @@ e3 = Entry(master)
 e1.insert(10, "192.168.0.0")
 e2.insert(10, "24")
 e3.insert(10, '172.30.10.1')
+e4.insert(10, 'admin')
+e5.insert(10, 'infoblox')
 
 e1.grid(row=1, column=1)
 e2.grid(row=2, column=1)
 e3.grid(row=0, column=1)
+e4.grid(row=3, column=1)
+e5.grid(row=4, column=1)
 
 Button(master, text='Quit', command=master.quit).grid(row=5, column=1, sticky=W, pady=4)
 Button(master, text='Ok', command=show).grid(row=5, column=2, sticky=W, pady=4)
