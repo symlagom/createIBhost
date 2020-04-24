@@ -234,7 +234,7 @@ mask = '24'
 # variant b: input dialog for network-
 # Window
 master = Tk()
-master.geometry('900x150')
+master.geometry('500x150')
 master.wm_title('Define Network Parameters')
 Label(master, text="Grid-Master   ").grid(row=0)
 Label(master, text="Network   ").grid(row=1)
@@ -253,8 +253,8 @@ e5 = Entry(master)
 e1.insert(10, "192.168.0.0")
 e2.insert(10, "24")
 e3.insert(10, '172.30.10.1')
-e4.insert(10, 'admin')
-e5.insert(10, 'infoblox')
+e4.insert(10, '')
+e5.insert(10, '')
 
 e1.grid(row=1, column=1)
 e2.grid(row=2, column=1)
